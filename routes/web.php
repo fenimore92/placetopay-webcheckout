@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::prefix('orders')->group(function () {
+    Route::view('/', 'orders.create')->name('order.create');    
+    Route::post('/', 'OrdersController@store');
+    Route::get('/show/{reference}', 'OrdersController@show')->name('order.show');
+    Route::get('/list', 'OrdersController@index')->name('order.list');
+});
