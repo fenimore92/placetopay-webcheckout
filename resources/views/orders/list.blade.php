@@ -5,7 +5,7 @@
             <h1>Lista de ordenes</h1>
             <hr>
             @if (session('error'))
-                <div class="alert alert-success">
+                <div class="alert alert-danger">
                     {{ session('error') }}
                 </div>
             @endif
