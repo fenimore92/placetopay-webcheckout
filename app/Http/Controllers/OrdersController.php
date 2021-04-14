@@ -166,7 +166,7 @@ class OrdersController extends Controller
         return new PlacetoPay([
             'login' => config('placetopay.login'),
             'tranKey' => config('placetopay.trankey'),
-            'url' => 'https://dev.placetopay.com/redirection/',
+            'url' => config('placetopay.url'),
             'rest' => [
                 'timeout' => 45, // (optional) 15 by default
                 'connect_timeout' => 30, // (optional) 5 by default
